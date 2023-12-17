@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/firstScreenFragment">
+
+    <fragment
+        android:id="@+id/firstScreenFragment"
+        android:name="com.example.mazady.ui.firstscreen.FirstScreenFragment"
+        android:label="FirstScreenFragment" >
+        <action
+            android:id="@+id/action_firstScreenFragment_to_secondScreenFragment"
+            app:destination="@id/secondScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondScreenFragment"
+        android:name="com.example.mazady.ui.secondscreen.SecondScreenFragment"
+        android:label="SecondScreenFragment" >
+
+        <argument
+            android:name="model"
+            app:argType="com.example.mazady.domain.model.TableModel" />
+    </fragment>
+</navigation>
